@@ -6,4 +6,4 @@ services:
     image: blueeye040/authenta_cicd:02e6639
     ports:
       - "5000:5000"
-    command: flask run
+  
