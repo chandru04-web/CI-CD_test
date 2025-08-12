@@ -13,7 +13,7 @@ EXPOSE 5000
 ENV FLASK_APP=app.py
 ENV FLASK_RUN_HOST=0.0.0.0
 ENV FLASK_DEBUG=1
+ENV APP_ENV=Development
 
-CMD ["/bin/bash"]
-CMD ["python","app.py"]
+CMD ["flask","run"]
 
