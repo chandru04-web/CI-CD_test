@@ -17,9 +17,10 @@ jobs:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{secrets.DOCKERHUB_PASSWORD}}
       
-      - name: Build and push
-        uses: docker/build-push-action@v4
-        with: 
-          context: .
-          push: true
-          tags: ${{ secrets.DOCKERHUB_USERNAME}}/authenta_cicd:02e6639
+      # Build with Docker Compose
+      - name: Build images using Docker Compose
+        run: docker compose build
+
+      # Push each image defined in docker-compose.yml
+      - name: Push images to Docker Hub
+        run: docker compose push

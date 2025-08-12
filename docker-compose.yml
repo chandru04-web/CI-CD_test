@@ -1,0 +1,9 @@
+version: "3.9"
+
+services:
+  flaskapp:
+    build: .
+    image: blueeye040/authenta_cicd:02e6639
+    ports:
+      - "5000:5000"
+    command: flask run
