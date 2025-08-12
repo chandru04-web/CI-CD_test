@@ -8,6 +8,7 @@ app = Flask(__name__)
 def main():
     return jsonify({
         "message": "Hello from CI/CD test app!",
+        "new push": "newly added",
         "env": {
             "APP_ENV": os.getenv("APP_ENV", "dev"),
             "GIT_SHA": os.getenv("GIT_SHA", "unknown")
