@@ -16,5 +16,5 @@ def main():
     })
 
 if __name__ == "__main__":
-    # Only for local debugging, in container we'll use gunicorn
-    app.run(host="0.0.0.0", port=int(os.getenv("PORT", 5000)), debug=True)
+    
+    app.run(host='0.0.0.0', port=5000, debug=True)
